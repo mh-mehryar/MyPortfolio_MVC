@@ -6,54 +6,123 @@
     @*<meta name="keywords" content="@ViewData["Keywords"]" />*@
     @await RenderSectionAsync("SEO",required:true);
     <title>@ViewData["Title"] - MyPortfolio</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MyPortfolio.styles.css" asp-append-version="true" />
+    <!-- Favicons -->
+    <link href="~/img/favicon.png" rel="icon">
+    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+
 </head>
+
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyPortfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Shop">Shop</a>
-                        </li>
-                    </ul>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <img src="~/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index">M.H Mehryar</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            @{
-                var year = DateTime.Now.Year;
-                var time24 = DateTime.Now.ToString("HH:mm:ss");
-            }
-            &copy; @year - MyPortfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            <p>Time is : @time24</p>
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                    <li><a asp-controller="Home" asp-action="About" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- ======= Hero Section ======= -->
+    <<!-- End Hero -->
+
+    <main id="main">
+        @RenderBody()
+        <!-- ======= About Section ======= -->
+
+        <!-- End About Section -->
+        <!-- ======= Facts Section ======= -->
+
+        <!-- End Facts Section -->
+        <!-- ======= Resume Section ======= -->
+       <!-- End Resume Section -->
+        <!-- ======= Portfolio Section ======= -->
+        <!-- End Portfolio Section -->
+        <!-- ======= Services Section ======= -->
+       <!-- End Services Section -->
+        <!-- ======= Testimonials Section ======= -->
+        <!-- End Testimonials Section -->
+        <!-- ======= Contact Section ======= -->
+       <!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>iPortfolio</span></strong>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/vendor/aos/aos.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/typed.js/typed.min.js"></script>
+    <script src="~/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/js/main.js"></script>
+
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.poptrox.min.js"></script>
+    <script src="~/js/skel.min.js"></script>
+    <script src="~/js/init.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

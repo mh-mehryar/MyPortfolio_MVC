@@ -1,4 +1,6 @@
-﻿@{
+﻿@*@model List<MyText>*@
+
+@{
     ViewData["title"] = "Home page";
     //ViewData["Keywords"] = "Project,Personal Blog,Personal Website";
   }
@@ -7,7 +9,21 @@
     <meta name="description" content="Index Description" />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+ <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-container" data-aos="fade-in">
+            <h1>@ViewData["headingtitle"]</h1>
+            <h1>Mohammad Hossein Mehryar</h1>
+            <p>I'm <span class="typed" data-typed-items="Software Engineer, Developer, Freelancer, ATM Technician"></span></p>
+        </div>
+  @*      @foreach (var text in Model)
+    {
+        <div class="hero-container" data-aos="fade-in">
+    <h1>@text.Id</h1>
+    <h1>@text.Title</h1>
+    <p>I'm <span class="typed" data-typed-items="@text.Description"></span></p>
+    <img src="~/img/portfolio/@text.Image" width="50px"/>
+    </div>
+    }*@
+      
+    </section><!-- End Hero -->
